@@ -1,0 +1,31 @@
+name:                balls
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/nolanrus/balls#readme
+license:             BSD3
+author:              Nolan (Denis M.)
+maintainer:          nolane16@gmail.com
+copyright:           2019 Denis M.
+category:            Simulation
+
+extra-source-files:
+  - README.md
+
+dependencies:
+  - array
+  - base
+  - deepseq
+  - parallel
+  - random
+  - sdl2
+  - vector
+
+executables:
+  balls:
+    source-dirs:      src
+    main:             Main.hs
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - '"-with-rtsopts=-A64m -N -I0 -qn4"'
